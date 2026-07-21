@@ -10,4 +10,34 @@ string
 
 
 scape sequence 
-1. 
+1. second string is the end of the string so its like " " or ' ' or ' " " ' 
+2. backslash \ to scape the double coat 
+    . \ " 
+    . \ ' 
+    . \\ 
+    . \n = new line 
+
+
+
+formatted string 
+1. defined 1 variable to set formatted string / concat
+
+
+String methods 
+1. len() length of strings
+2. object are method that called access using the dot access . 
+3. strip() its remove the white space
+4. lstrip, rstrip its just left and right strip
+5. find()
+6. python is case sentivite language
+
+
+numbers 
+1. arithmetics maths operators
+
+working with numbers 
+1. round() roundoff
+2. abs()  its absolute value 
+3. pthon3 math module
+
+
