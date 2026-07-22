@@ -41,3 +41,19 @@ working with numbers
 3. pthon3 math module
 
 
+type conversion 
+1. first number and string cannot to converted directly in the compiler 
+2. like the first one the string and number cannot be concatenated  " " + 1 
+
+
+
+fundamentals of programming 
+1. comparison operators 
+2. conditional statements 
+3. ternary operator 
+4. short circuit evaluation
+5. loops 
+6. loops if else
+7. nested loop
+8. iterables
+9. while loops
