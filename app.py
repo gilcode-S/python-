@@ -78,11 +78,69 @@
 #     for y in range(3):
 #         print(f"({x}, {y})")
 
-#while loop
+# while loop
 # number = 100
 
 # while number > 0:
 #     print(number)
 #     number //= 2
 
-command = ''
+# command = ''
+# while command != "quit":
+#     command = input('>')
+#     print("ECHO", command)
+
+# count = 0
+
+# for number in range(2, 20, 2):
+#     count += 1
+#     print(number)
+
+# print(f'we have {count} even numbers')
+
+
+# 10.function
+# def greet():
+#     print('Hi there')
+#     print('Welcome aboard')
+
+
+# greet()
+
+
+# 11 . arguments
+
+# def greet(first_name, last_name):
+#     print(f"Hi {first_name} {last_name}")
+#     print("Welcome Abroad")
+
+# greet("Gilbert", "Engalan")
+
+
+# type of function
+# return calculate value
+
+# def get_greeting(name):
+#     return f'hello {name}'
+
+
+# message = get_greeting("gilbert")
+# file = open("context.txt", 'w')
+# file.write(message)
+
+
+# argument keyword
+# def increment(number, by):
+#     return number+by
+
+
+# print(increment(2, 1))
+
+
+# default arguments
+
+def multiply(*numbers):
+    print(numbers)
+
+
+multiply(2, 3, 3, 3, 3, 3)

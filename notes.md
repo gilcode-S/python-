@@ -57,3 +57,12 @@ fundamentals of programming
 7. nested loop
 8. iterables
 9. while loops
+10. infinite loops
+
+
+functions 
+1. def => define 
+2. arguments
+3. types of function
+    .perform a task
+    .calculate the value
