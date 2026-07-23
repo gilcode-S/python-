@@ -139,8 +139,8 @@
 
 # default arguments
 
-def multiply(*numbers):
-    print(numbers)
+# def multiply(*numbers):
+#     print(numbers)
 
 
-multiply(2, 3, 3, 3, 3, 3)
+# multiply(2, 3, 3, 3, 3, 3)
