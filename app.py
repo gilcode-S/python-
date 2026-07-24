@@ -178,3 +178,35 @@
 #     print()
 
 
+capitals = {"USA": "Washington D.C",
+            "India": "New Delhi",
+            "China": "Bejing",
+            "Russia": "Moscow"}
+# print(dir(capitals))
+# print(help(capitals))
+
+
+# print(capitals.get("Japan"))
+
+# if capitals.get("Russia"):
+#     print("that capital exists")
+# else:
+#     print("that capital doesn't exist")
+
+# capitals.update({'Germany': 'Berlin'})
+
+# print(capitals)
+# keys method
+# keys = capitals.keys()
+# for key in capitals.keys():
+#     print(key)
+
+# values method
+# values = capitals.values()
+# for value in capitals.values():
+#     print(value)
+
+# items method
+# items = capitals.items()
+# for key, value in capitals.items():
+#     print(f'{key} : {value}')

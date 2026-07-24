@@ -83,3 +83,7 @@ collections
 
 
 dictionaries
+1. collection types 
+2. consist key value pairs
+example : id : name, item : price
+
