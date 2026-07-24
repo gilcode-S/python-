@@ -161,5 +161,20 @@
 # # fruits.clear()
 
 
-
 # print(fruits)
+
+
+# 2d list
+# fruits = ['apple', 'orange', 'banana']
+# vegetables = ['tomato', 'potato', 'onion']
+# meats = ['chicken', 'pig', 'cow']
+
+# groceries = [fruits, vegetables, meats]
+
+
+# for collection in groceries:
+#     for food in collection:
+#         print(food, end=" ")
+#     print()
+
+

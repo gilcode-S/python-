@@ -77,4 +77,9 @@ collections
 
 
 
-dictionary
+2d list
+1. 2 dimen [] []
+2. matrix and grid data [] []
+
+
+dictionaries
