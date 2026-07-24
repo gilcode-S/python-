@@ -144,3 +144,22 @@
 
 
 # multiply(2, 3, 3, 3, 3, 3)
+
+
+# collection
+# set unorder {}
+# list []
+# tuple ()
+# fruits = ('apple', 'orange', 'banana', 'coconut')
+# # print(dir(fruits))
+# # print(help(fruits))
+# # print(len(fruits))
+
+# # fruits.add('pineapple')
+# # fruits.remove('apple')
+# # fruits.pop()
+# # fruits.clear()
+
+
+
+# print(fruits)

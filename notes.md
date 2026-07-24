@@ -66,3 +66,15 @@ functions
 3. types of function
     .perform a task
     .calculate the value
+
+
+
+
+collections
+1. list = order  []
+2. set = unorder {}
+3. tuple = ()
+
+
+
+dictionary
