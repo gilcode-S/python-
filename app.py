@@ -178,6 +178,7 @@
 #     print()
 
 
+import random as ran
 capitals = {"USA": "Washington D.C",
             "India": "New Delhi",
             "China": "Bejing",
@@ -210,3 +211,16 @@ capitals = {"USA": "Washington D.C",
 # items = capitals.items()
 # for key, value in capitals.items():
 #     print(f'{key} : {value}')
+
+
+# example code how to generate random numbers
+# random.shuffle() = []
+# random.choice()
+# random.random()
+# low = 1
+# high = 100
+
+# number = ran.randint(low, high)
+# print(number)
+
+
