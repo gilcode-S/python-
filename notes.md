@@ -87,3 +87,9 @@ dictionaries
 2. consist key value pairs
 example : id : name, item : price
 
+
+
+
+functions 
+resuable collection
+block of resuable code 

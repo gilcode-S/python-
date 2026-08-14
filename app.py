@@ -224,3 +224,40 @@ capitals = {"USA": "Washington D.C",
 # print(number)
 
 
+# default args fucntion exercise
+
+# import time as t
+
+# def count(end,start=0):
+#     for x in range(start, end+1):
+#         print(x)
+#         t.sleep(1)
+#     print('done')
+
+# count(10,0)
+
+# keyword args - preceded by identifier
+
+
+# args and kwargs = keywords
+
+# def add(*args):
+#     total = 0
+#     for arg in args:
+#         total += arg
+#     return total
+
+# print(add(1))
+
+
+# kwargs
+
+# def print_address(**kwargs):
+#     for key, value in kwargs.items():
+#         print(f"{key} : {value}")
+
+
+# print(print_address(street="Sampaloc 1",
+#                     city="Dasmarinas",
+#                     province="Cavite",
+#                     zip="4114"))
