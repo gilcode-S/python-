@@ -261,3 +261,68 @@ capitals = {"USA": "Washington D.C",
 #                     city="Dasmarinas",
 #                     province="Cavite",
 #                     zip="4114"))
+
+
+# iterables = return its element in loop
+
+# number = [1, 2, 3, 4, 5]
+
+# for num in reversed(number):
+#     print(num, end="-")
+
+
+# membership operators in python
+
+
+# word = "APPLE"
+
+# letter = input("Guess a letter in secret word: ").upper()
+
+# if letter in word:
+#     print(f"There is  a {letter}")
+# else:
+#     print(f"{letter} was not found")
+
+
+# list comprehenstion
+
+# doubles = [x * 2 for x in range(1, 11)]
+# triples = [x * 3 for x in range(1, 11)]
+# print(doubles)
+# print(triples)
+
+
+# grades = [61, 199, 99, 95, 19, 29]
+# passing_grades = [grade for grade in grades if grade >= 60]
+# failling_grades = [grade for grade in grades if grade < 60]
+
+# print(passing_grades)
+# print(failling_grades)
+
+
+# match case statement
+
+# def day_of_week(day):
+#     match day:
+#         case 1:
+#             return "its monday"
+#         case 2:
+#             return 'its tuesday'
+#         case 3:
+#             return 'its wednesday'
+#         case 4:
+#             return 'its thrusday'
+#         case 5:
+#             return 'its friday'
+#         case 6:
+#             return 'its saturday'
+#         case 7:
+#             return 'its sunday'
+#         case _:
+#             return "invalid"
+
+
+# print(day_of_week(1))
+
+
+# print(help('modules'))

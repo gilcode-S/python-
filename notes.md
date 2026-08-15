@@ -76,7 +76,6 @@ collections
 3. tuple = ()
 
 
-
 2d list
 1. 2 dimen [] []
 2. matrix and grid data [] []
@@ -93,3 +92,36 @@ example : id : name, item : price
 functions 
 resuable collection
 block of resuable code 
+
+
+
+
+
+
+
+
+list comprehension = concise way to list in py, expression 
+construction
+variable = [expression for loop if condition]
+
+
+
+
+
+match case statement - similar to switch case statement 
+
+
+
+module = use import useful to break large program
+
+
+
+
+variable scope = where it variable and accessible
+scope resolution = local, enclosed B G E L 
+B - built in
+G - global 
+E - enclosed
+L - local
+
+if __name__ == __main__  = this means function and classes can be reused
