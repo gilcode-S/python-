@@ -1,7 +1,7 @@
 # hangman
+from wordlist import words
 import random as ran
 
-words = ('apple', 'orange', 'banana', 'coconut', 'pineapple')
 
 # asc art
 # dic of key: () -> tumple
@@ -59,12 +59,12 @@ def main():
 
         guess = input("Enter a letter: ").lower()
 
-        #input validation
+        # input validation
         if len(guess) != 1 or not guess.isalpha():
             print('Invalid input')
             continue
 
-        #display set letters
+        # display set letters
         if guess in guessed_letters:
             print(f"{guess} is already guessed!")
             continue
@@ -83,6 +83,11 @@ def main():
             display_man(wrong_guesses)
             display_answer(answer)
             print("YOU WIN")
+            is_running = False
+        elif wrong_guesses >= len(hangman_art) - 1:
+            display_man(wrong_guesses)
+            display_answer(answer)
+            print("YOU LOSE")
             is_running = False
 
 
