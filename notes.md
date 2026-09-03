@@ -167,7 +167,8 @@ Inheritance - allows a class to inherit attributes and methods from another clas
 
 
 
-
+day 13:
+super() = function used in a child class to call methods from a parent class (superclass) it allows you to extend 
 
 
 
