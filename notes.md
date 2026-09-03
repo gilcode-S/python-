@@ -149,3 +149,18 @@ note in class variable - it should be class not the construction so its should t
 
 
 
+
+
+
+
+
+
+
+
+
+day 13: 
+Inheritance - allows a class to inherit attributes and methods from another class
+
+
+
+
