@@ -174,4 +174,5 @@ super() = function used in a child class to call methods from a parent class (su
 
 day 13:
 polymorphism = poly = many , morphe = form
+duck typing = another way to achieve polymorph beside inheritance
 
