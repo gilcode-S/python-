@@ -161,6 +161,13 @@ note in class variable - it should be class not the construction so its should t
 day 13: 
 Inheritance - allows a class to inherit attributes and methods from another class
 
+2 types of inheritancess
+-multiple inheritance = inherit from more than one parent
+-multilevel inheritance = inherit it from parent which is from another parent
+
+
+
+
 
 
 
