@@ -125,3 +125,27 @@ E - enclosed
 L - local
 
 if __name__ == __main__  = this means function and classes can be reused
+
+
+
+
+
+
+
+
+
+
+
+
+
+day 13:
+PYTHON OBJECT Oriented programming 
+object - bundle of related attributes
+class - blueprint used to design the structure and layout
+
+class varible = shared among all instances of a class defined outside the constructor allow you to share data among object 
+
+note in class variable - it should be class not the construction so its should the capital one 
+
+
+
