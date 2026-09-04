@@ -195,4 +195,9 @@ class methods = Allow operations related to the class itself
 
 magic methods = dunder methods (double underscore) like __init__ , __str__ , __eq__
 
-        
+
+property = decorator used to define method as project 
+         = benefits add additional logic when read, write and delete attributes
+
+
+decorator = a function that extends the behavior of another function w/o modifying the base function
