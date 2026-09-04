@@ -180,3 +180,15 @@ static method = method belong to class rather than any object from that class (i
 instances methods = best for operations on instances of the class (object)
 static methods = best for utility functions that do not need access to class data
 
+
+
+
+
+
+
+
+day 14: 
+class methods = Allow operations related to the class itself
+              = take (self) as the first parameter
+              = take (cls) as first parameter
+        
