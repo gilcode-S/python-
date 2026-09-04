@@ -201,3 +201,9 @@ property = decorator used to define method as project
 
 
 decorator = a function that extends the behavior of another function w/o modifying the base function
+
+
+
+exception = an event that interrupts the flow of program 
+            1.try 2. except 3. finally
+
