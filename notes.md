@@ -176,3 +176,7 @@ day 13:
 polymorphism = poly = many , morphe = form
 duck typing = another way to achieve polymorph beside inheritance
 
+static method = method belong to class rather than any object from that class (instances)
+instances methods = best for operations on instances of the class (object)
+static methods = best for utility functions that do not need access to class data
+
