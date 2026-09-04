@@ -191,4 +191,8 @@ day 14:
 class methods = Allow operations related to the class itself
               = take (self) as the first parameter
               = take (cls) as first parameter
+
+
+magic methods = dunder methods (double underscore) like __init__ , __str__ , __eq__
+
         
