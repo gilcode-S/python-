@@ -207,3 +207,22 @@ decorator = a function that extends the behavior of another function w/o modifyi
 exception = an event that interrupts the flow of program 
             1.try 2. except 3. finally
 
+
+
+
+
+file detection 
+2 types 
+    1. relative path = iisang folder or same path with the main file kaya kahit name nalang ilagay
+    2. absolute path = whole path location na mismo. mas direct location something like that
+
+
+output handling
+3 types 
+    1. file path = text
+    2. file path = json need i iterate/loop each to write each data
+    3. file path = csv same as json need iterate/loop each 
+        - each file path have try and execpt for security also for prevention of error 
+
+
+
