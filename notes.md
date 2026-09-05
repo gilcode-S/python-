@@ -235,3 +235,8 @@ day 14:
               = variable name = import datetime.datetime("pass ng date pedeng year, month, day")
 
             
+day 15: 
+    multithreading = used to perform multi task concurrently (multitasking)
+    good for i/o
+
+    
