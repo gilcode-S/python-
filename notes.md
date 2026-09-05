@@ -231,4 +231,7 @@ day 14:
     
 
 day 14:
-    
+    date time = format variable name = import datetime.datetime.now = current date
+              = variable name = import datetime.datetime("pass ng date pedeng year, month, day")
+
+            
