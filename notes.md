@@ -226,3 +226,7 @@ output handling
 
 
 
+day 14: 
+    py reading file same as the output handling
+    
+
