@@ -1,7 +1,7 @@
 # pyQT5 introduction
 
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QPushButton, QCheckBox, QRadioButton, QButtonGroup
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
@@ -14,10 +14,19 @@ class MainWindow(QMainWindow):
         # GUI winodw size
         self.setWindowTitle("My cool first GUI")
         self.setGeometry(700, 300, 500, 500)
-        self.button = QPushButton("Click me", self)
-        self.label = QLabel("Hello", self)
+        # self.checkbox = QCheckBox("Do you like food?", self)
+        # self.button = QPushButton("Click me", self)
+        # self.label = QLabel("Hello", self)
+        self.radio1 = QRadioButton("Visa", self)
+        self.radio2 = QRadioButton("Master Card", self)
+        self.radio3 = QRadioButton("Gift Card", self)
+        self.radio4 = QRadioButton("Online Payment", self)
+        self.radio5 = QRadioButton("Cash Payment", self)
+        # grouping
+        self.button_group1 = QButtonGroup(self)
+        self.button_group2 = QButtonGroup(self)
         self.initUI()
-
+        # ------------ window
         # GUI windows label
         # label = QLabel("Hello", self)
         # label.setFont(QFont("Arial", 30))
@@ -49,6 +58,7 @@ class MainWindow(QMainWindow):
 
         # common practice if the code was too long and messy
 
+    # ----------------widget text label
     # def initUI(self):
     #     central_widget = QWidget()
     #     self.setCentralWidget(central_widget)
@@ -98,17 +108,64 @@ class MainWindow(QMainWindow):
         # gbox.addWidget(label5, 2, 2)
 
         # central_widget.setLayout(gbox)
+    # ------------------ button
+    # def initUI(self):
+
+    #     self.button.setGeometry(150, 200, 200, 100)
+    #     self.button.setStyleSheet("font-size: 30px;")
+    #     self.button.clicked.connect(self.on_click)
+    #     self.label.setGeometry(150, 300, 200, 100)
+    #     self.label.setStyleSheet('font-size:50px;')
+
+    # def on_click(self):
+    #     self.label.setText("Goodbye")
+
+        # ------ checkbox -------------
+    # def initUI(self):
+    #     self.checkbox.setGeometry(10, 0, 500, 100)
+    #     self.checkbox.setStyleSheet("font-size: 32px;"
+    #                                 "font-family: Arial")
+    #     self.checkbox.setChecked(False)
+    #     self.checkbox.stateChanged.connect(self.checkbox_change)
+
+    # def checkbox_change(self, state):
+    #     if state == Qt.Checked:
+    #         print("You like food")
+    #     else:
+    #         print("You do not like food")
+
+    # ---------- radio box --------------------
 
     def initUI(self):
+        self.radio1.setGeometry(0, 0, 300, 50)
+        self.radio2.setGeometry(0, 50, 300, 50)
+        self.radio3.setGeometry(0, 100, 300, 50)
+        self.radio4.setGeometry(0, 150, 300, 50)
+        self.radio5.setGeometry(0, 200, 300, 50)
 
-        self.button.setGeometry(150, 200, 200, 100)
-        self.button.setStyleSheet("font-size: 30px;")
-        self.button.clicked.connect(self.on_click)
-        self.label.setGeometry(150, 300, 200, 100)
-        self.label.setStyleSheet('font-size:50px;')
+        self.setStyleSheet("QRadioButton{"
+                           "font-size: 40px;"
+                           "font-family: 10px;"
+                           "padding: 10px;}")
 
-    def on_click(self):
-        self.label.setText("Goodbye")
+        self.button_group1.addButton(self.radio1)
+        self.button_group1.addButton(self.radio2)
+        self.button_group1.addButton(self.radio3)
+        self.button_group2.addButton(self.radio4)
+        self.button_group2.addButton(self.radio5)
+
+        # connect to slot
+        self.radio1.toggled.connect(self.radioButton_change)
+        self.radio2.toggled.connect(self.radioButton_change)
+        self.radio3.toggled.connect(self.radioButton_change)
+        self.radio4.toggled.connect(self.radioButton_change)
+        self.radio5.toggled.connect(self.radioButton_change)
+
+    def radioButton_change(self):
+        radio_button = self.sender()
+
+        if radio_button.isChecked():
+            print(f"{radio_button.text()} is selected")
 
 
 def main():
