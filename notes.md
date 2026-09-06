@@ -253,3 +253,4 @@ day 15:
     widget = we can use separate construction and easy deleting and file structure
     checkbox = meron state constructor
     radiobox = pedeng magkaroon ng group
+    textare + submit button = input field lang 
