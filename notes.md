@@ -239,4 +239,10 @@ day 15:
     multithreading = used to perform multi task concurrently (multitasking)
     good for i/o
 
+
+day15: 
+    API - how to connect 
+    need ng base url 
+    tapos return json 
+    created def function
     
