@@ -245,4 +245,10 @@ day15:
     need ng base url 
     tapos return json 
     created def function
+
+
+day 15:
+    font can customize like the css method commands 
+    also the label and the display avatar or imaeg using the ping Qlabel or QT
+    widget = we can use separate construction and easy deleting and file structure
     
