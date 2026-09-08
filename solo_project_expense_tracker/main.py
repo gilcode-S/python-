@@ -1,3 +1,5 @@
+import csv 
+
 
 expenses = []
 
@@ -24,7 +26,43 @@ def add_expense():
 
     expenses.append(expense)
     next_id += 1
+    save_expense()
     print("\n Expense added Successfully")
+
+def load_expense():
+    global next_id
+
+    try:
+        with open('solo_project_expense_tracker/data/expenses.csv', 'r') as file:
+            reader = csv.DictReader(file)
+
+            for row in reader:
+                expense = {
+                    'id': int(row['id']),
+                    'date': row['date'],
+                    'category': row['category'],
+                    'description' : row['description'],
+                    'amount' : float(row['amount'])
+                }
+
+                expenses.append(expense)
+
+                if expense['id'] >= next_id: 
+                     next_id = expense['id'] + 1
+    except FileNotFoundError: 
+        print("No expense file found. Starting with empty expenses.")
+
+
+def save_expense(): 
+    with open('solo_project_expense_tracker/data/expenses.csv', 'w', newline="") as file:
+        fieldnames = ['id', 'date', 'category', 'description', 'amount']
+
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for expense in expenses:
+            writer.writerow(expense)
+
 
 
 def view_expenses():
@@ -35,7 +73,7 @@ def view_expenses():
         return
 
     print("-" * 75)
-    print(f'{'ID':<5}{'DATE':<15}{'CATEGORY':<15}{'DESCRIPTION':<20}{'AMOUNT':>}')
+    print(f'{'ID':<5}{'DATE':<15}{'CATEGORY':<15}{'DESCRIPTION':<20} P{'AMOUNT':>}')
     print('-' * 75)
 
     for expense in expenses:
@@ -61,6 +99,34 @@ def show_total():
     print(f'Total: P{total:.2f}')
 
 
+def spending_total():
+    print('\n ====== SPENDING BY CATEGORY =======')
+
+    if not expenses:
+        print("No expense recorded yet")
+        return
+
+    category_totals = {}
+
+    for expense in expenses:
+        category = expense['category']
+        amount = expense['amount']
+
+        if category in category_totals:
+            category_totals[category] += amount
+        else:
+            category_totals[category] = amount
+
+    total = 0
+
+    for category, amount in category_totals.items():
+        print(f'{category:<12} P{amount:.2f}')
+        total += amount
+
+    print('=' * 31)
+    print(f"{'Total':<12} P{total:.2f}")
+
+
 def delete_expense():
     print('\n ====== DELETE EXPENSE =======')
 
@@ -74,6 +140,7 @@ def delete_expense():
         for expense in expenses:
             if expense['id'] == expense_id:
                 expenses.remove(expense)
+                save_expense()
                 print("\nExpense deleted successfully")
                 return
 
@@ -90,11 +157,13 @@ def show_menu():
     print('======================')
     print('1. add expense')
     print('2. view expense')
-    print('3. show total spending')
+    print('3. show total spending category')
     print('4. Delete expense')
     print('5. Exit')
     print('======================')
 
+
+load_expense()
 
 while is_expense:
     show_menu()
@@ -106,7 +175,7 @@ while is_expense:
     elif choice == '2':
         view_expenses()
     elif choice == '3':
-        show_total()
+        spending_total()
     elif choice == '4':
         delete_expense()
     elif choice == '5':
