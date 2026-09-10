@@ -3,3 +3,5 @@ id,date,category,description,amount
 2,2026-10-9,food ,food is life,500.0
 3,2026-10-11,load,mobile load data,100.0
 4,2026-10-12,bills,water / electricity bill,1000.0
+5,2026-9-10,transpo,daily transpo,500.0
+6,2026-9-15,savings,retirement plan,500.0

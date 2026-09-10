@@ -30,7 +30,7 @@ def add_expense():
     print("\n Expense added Successfully")
 
 def load_expense():
-    global next_id
+    global next_id 
 
     try:
         with open('solo_project_expense_tracker/data/expenses.csv', 'r') as file:
