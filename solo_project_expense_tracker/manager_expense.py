@@ -140,3 +140,83 @@ def delete_expense():
         )
     except ValueError:
         print('\nInvalid ID. Please enter a number.')
+
+
+def get_optional_text(prompt, current_value):
+    new_value = input(f"New {prompt} (press Enter to keep {current_value}): ")
+
+    if not new_value.strip():
+        return current_value
+
+    return new_value
+
+
+def get_optional_amount(current_value):
+    while True:
+        new_value = input(
+            f"New Amount (press ENTER to keep {current_value}): ")
+
+        if not new_value.strip():
+            return current_value
+
+        try:
+            amount = float(new_value)
+            if amount <= 0:
+                print("Amount must be greater than 0.")
+                continue
+
+            return amount
+        except ValueError:
+            print("Invalid amount. Please enter a number..")
+
+def get_optional_date(current_value):
+    while True:
+        date = input(f"New Date (press 'Enter' to keep {current_value}): ").strip()
+
+        if not date:
+            return current_value
+
+        try:
+            datetime.strptime(date, "%Y-%m-%d")
+            return date
+        except ValueError:
+            print("Invalid date. Please use YYYY-MM-DD.")
+
+
+def edit_expense():
+    print("\n ========= EDIT EXPENSE =============")
+
+    if not expenses:
+        print("No expense recorded yet.")
+        return
+
+    try:
+        expense_id = int(input("\n Enter the ID of the expense to edit: ?"))
+    except ValueError:
+        print("\nInvalid ID. Please enter a number")
+        return
+
+    target_expense = None
+    for expense in expenses:
+        if expense['id'] == expense_id:
+            target_expense = expense
+            break
+    if target_expense is None:
+        print("\nInvalid ID not Found")
+        return
+    print("\nCurrent values:")
+    print(f"Amount: {target_expense['amount']}")
+    print(f"Category: {target_expense['category']}")
+    print(f"Description: {target_expense['description']}")
+    print(f"Date: {target_expense['date']}")
+
+    target_expense['category'] = get_optional_text(
+        "Category",
+        target_expense['category']
+    )
+    target_expense['amount'] = get_optional_amount(target_expense['amount'])
+    target_expense['description'] = get_optional_text("Description", target_expense['description'])
+    target_expense['date'] = get_optional_date(target_expense['date'])
+
+    save_expense()
+    print("\nExpense updated successfully")

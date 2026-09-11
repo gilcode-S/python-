@@ -2,7 +2,22 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+
+
+def analyze_expenses(expenses):
+    df = pd.DataFrame(expenses)
+
+    basic_analysis(df)
+    category_analysis(df)
+    daily_analysis(df)
+    create_charts(df)
+
+
 def basic_stats(df):
+
+    if df.empty:
+        return
+
     total_amount = df["amount"].sum()
     count_expense = df['amount'].count()
     avg_expense = df['amount'].mean()
@@ -21,6 +36,10 @@ def basic_stats(df):
 def basic_analysis(df):
 
     stats = basic_stats(df)
+
+    if stats is None:
+        return
+
     total_amount = stats['total_amount']
     count_expense = stats['count_expense']
     avg_expense = stats['avg_expense']
@@ -36,6 +55,10 @@ def basic_analysis(df):
 
 
 def category_stats(df):
+
+    if df.empty:
+        return None
+
     category_count = df["category"].value_counts()
     category_spending = df.groupby("category")["amount"].sum()
     highest_category = category_spending.idxmax()
@@ -57,6 +80,10 @@ def category_stats(df):
 def category_analysis(df):
     print("\n====== Category Count =====\n")
     stats = category_stats(df)
+
+    if stats is None:
+        print("No expense to analyze")
+        return
 
     category_count = stats["category_count"]
     category_spending = stats["category_spending"]
@@ -92,6 +119,9 @@ def category_analysis(df):
 
 
 def daily_stats(df):
+
+    if df.empty:
+        return None
     df['date'] = pd.to_datetime(df['date'])
     daily_spending = df.groupby(
         df['date'].dt.to_period('D')
@@ -104,6 +134,9 @@ def daily_stats(df):
 
 def daily_analysis(df):
     stats = daily_stats(df)
+    if stats is None:
+        print('No expense to analyze')
+        return
     daily_spending = stats['daily_spending']
 
     print('\n====== Daily Spending =====\n')
@@ -112,6 +145,8 @@ def daily_analysis(df):
 
 
 def chart_stats(df):
+    if df.empty:
+        return None
     category_totals = df.groupby("category")['amount'].sum()
 
     return {
@@ -122,6 +157,9 @@ def chart_stats(df):
 def create_charts(df):
 
     stats = chart_stats(df)
+    if stats is None:
+        print("No expense to analyze")
+        return
     category_totals = stats['category_totals']
     plt.barh(category_totals.index, category_totals.values)
     plt.title("Spending by Category")
@@ -129,5 +167,3 @@ def create_charts(df):
     plt.xlabel("Spending (₱)")
     plt.tight_layout()
     plt.show()
-
-

@@ -1,4 +1,4 @@
-import pandas as pd
+
 import analyzer
 import manager_expense
 
@@ -11,9 +11,10 @@ def show_menu():
     print('======================')
     print('1. Add Expense')
     print('2. View Expenses')
-    print('3. Delete Expenses')
-    print('4. Analyze Expenses')
-    print('5. Exit')
+    print('3. Edit Expenses')
+    print('4. Delete Expenses')
+    print('5. Analyze Expenses')
+    print('6. Exit')
 
 
 while True:
@@ -24,18 +25,16 @@ while True:
         manager_expense.add_expense()
 
     elif choice == '2':
+        
         manager_expense.view_expenses()
     elif choice == '3':
-        manager_expense.delete_expense()
+        manager_expense.edit_expense()
     elif choice == '4':
-        df = pd.DataFrame(manager_expense.expenses)
-
-        analyzer.basic_analysis(df)
-        analyzer.category_analysis(df)
-        analyzer.daily_analysis(df)
-        analyzer.create_charts(df)
-
+        manager_expense.delete_expense()
     elif choice == '5':
+        analyzer.analyze_expenses(manager_expense.expenses)
+
+    elif choice == '6':
         print('\nThank you for using Expense Tracker!')
         break
 
